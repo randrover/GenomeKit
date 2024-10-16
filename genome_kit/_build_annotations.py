@@ -25,6 +25,7 @@ from . import (
 GENCODE_TEST_ANNOTATIONS = {
     "hg19.p13.plusMT": "gencode.v29lift37",  # v29lift37 for hg19
     "hg38.p12": "gencode.v29",  # v29 for hg38
+    "hg38.p14": "gencode.v44",  # v44 for hg38
 }
 
 UCSC_REFSEQ_TEST_ANNOTATIONS = {
