@@ -33,7 +33,7 @@ def get_appris_version(annotation):
         return "2019_09.v29"
     elif any(x in annotation for x in ["gencode.v29", "gencode.vM19", "ncbi_refseq.v109"]):
         return "2018_12.v28"
-    elif any(x in annotation for x in ["gencode.v41", "gencode.vM30"]):
+    elif any(x in annotation for x in ["gencode.v41", "gencode.vM30", "gencode.v44"]):
         return "2022_07.v47"
     elif any(x in annotation for x in ["ncbi_refseq.v110"]):
         return "2023_08.v48"
