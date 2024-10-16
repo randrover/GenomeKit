@@ -128,6 +128,8 @@ class _UCSCRefSeqBuilder(object):
 _ANNOTATION_BUILDERS = {
     "gencode.v29":
         _GencodeBuilder("hg38.p12", "release_29/gencode.v29.annotation.gff3.gz"),
+    "gencode.v44":
+        _GencodeBuilder("hg38.p14", "release_44/gencode.v44.annotation.gff3.gz"),
     "gencode.v29lift37":
         _GencodeBuilder("hg19.p13.plusMT", "release_29/GRCh37_mapping/gencode.v29lift37.annotation.gff3.gz"),
     "ucsc_refseq.2017-06-25":
