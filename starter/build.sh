@@ -32,6 +32,12 @@ wget -O v29.gff3.gz http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/rel
 python -c 'import genome_kit as gk; gk.GenomeAnnotation.build_gencode("v29.gff3.gz", "gencode.v29", gk.Genome("hg38.p12"))'
 rm v29.gff3.gz
 
+## Gencode v44
+## To use: genome_kit.Genome("gencode.v44")
+wget -O v44.gff3.gz http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_44/gencode.v44.annotation.gff3.gz
+python -c 'import genome_kit as gk; gk.GenomeAnnotation.build_gencode("v44.gff3.gz", "gencode.v44", gk.Genome("hg38.p14"))'
+rm v44.gff3.gz
+
 ## NCBI RefSeq v109
 ## To use: genome_kit.Genome("ncbi_refseq.v109")
 wget -O v109.gff3.gz http://ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Homo_sapiens/ARCHIVE/ANNOTATION_RELEASE.109/GFF/ref_GRCh38.p12_top_level.gff3.gz
