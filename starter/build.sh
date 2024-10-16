@@ -26,6 +26,20 @@ if ! grep -q "chrUn_KI270752v1" hg38.p12.chromAlias.txt; then
 fi
 mv ./* "${DATA_DIR}"
 
+# hg38.p14
+# To use: genome_kit.Genome("hg38.p14")
+wget https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/p14/hg38.p14.2bit
+wget https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/p14/hg38.p14.chrom.sizes
+wget https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/p14/hg38.p14.chromAlias.txt
+write_hash_file "hg38.p14"
+# chrUn_KI270752v1 missing from some hg38 chromAlias.txt data sources.
+# It was dropped from the RefSeq release due to being derived likely from the human-hamster CHO cell line.
+# See https://groups.google.com/a/soe.ucsc.edu/g/genome/c/oXgnoLwXn1g/m/zLV4Wgb2AgAJ for more details.
+if ! grep -q "chrUn_KI270752v1" hg38.p14.chromAlias.txt; then
+    echo "chrUn_KI270752v1	HSCHRUN_RANDOM_CTG29	KI270752.1	NT_187507.1" >> hg38.p14.chromAlias.txt
+fi
+mv ./* "${DATA_DIR}"
+
 ## Gencode v29
 ## To use: genome_kit.Genome("gencode.v29")
 wget -O v29.gff3.gz http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.v29.annotation.gff3.gz
